@@ -1,0 +1,21 @@
+tanggal_mulai,tanggal_selesai,nama,kategori,cakupan,sumber,catatan
+2021-12-24,2022-01-02,Periode Nataru,nataru,nasional,https://setkab.go.id/mendagri-terbitkan-inmendagri-66-2021-tentang-pencegahan-dan-penanggulangan-covid-19-pada-natal-dan-tahun-baru/,"Inmendagri 66/2021 menggantikan rencana PPKM Level 3 Nataru yang dibatalkan. Alun-alun ditutup 31 Des-1 Jan, perayaan tahun baru yang menimbulkan kerumunan dilarang."
+2021-12-25,2021-12-25,Natal,libur_nasional,nasional,https://setkab.go.id/inilah-perubahan-hari-libur-nasional-dan-cuti-bersama-tahun-2021/,"Jatuh hari Sabtu. Cuti bersama 24 Des 2021 dihapus, jadi 24 Des hari kerja biasa."
+2022-01-01,2022-01-01,Tahun Baru,libur_nasional,nasional,https://setkab.go.id/inilah-skb-3-menteri-perubahan-hari-libur-nasional-dan-cuti-bersama-tahun-2022/,Jatuh hari Sabtu dan bertepatan dengan tanggal anomali data.
+2022-01-04,2022-02-07,PPKM Level 2 DIY,ppkm,DIY,https://kabar24.bisnis.com/read/20220201/15/1495492/ppkm-jawa-bali-1-7-februari-2022-daftar-lengkap-wilayah-level-2,"Inmendagri 1, 3, 5, dan 6 Tahun 2022. Kelima kabupaten/kota DIY di level 2."
+2022-01-29,2022-01-29,34 kasus probable Omicron di DIY,omicron,DIY,https://news.republika.co.id/berita/r6fgft370/tercatat-34-kasus-probable-omicron-di-diy,"Tersebar di Bantul, Sleman, dan Gunungkidul."
+2022-02-01,2022-02-01,Imlek,libur_nasional,nasional,https://setkab.go.id/inilah-skb-3-menteri-perubahan-hari-libur-nasional-dan-cuti-bersama-tahun-2022/,
+2022-02-08,2022-03-07,PPKM Level 3 DIY (Omicron),ppkm,DIY,https://news.republika.co.id/berita/r6za0a436/diy-kembali-terapkan-ppkm-level-3-ini-langkah-sultan,"Inmendagri 9, 10, 12, dan 14 Tahun 2022; Ingub DIY 5/2022. Kenaikan level karena lonjakan Omicron."
+2022-02-10,2022-02-10,73 kasus Omicron terkonfirmasi WGS di DIY,omicron,DIY,https://www.merahputih.com/post/read/sri-sultan-aktifkan-kembali-satgas-covid-19-setelah-umumkan-73-kasus-positif-omicron,Satgas COVID-19 DIY diaktifkan kembali.
+2022-02-28,2022-02-28,Isra Mikraj,libur_nasional,nasional,https://setkab.go.id/inilah-skb-3-menteri-perubahan-hari-libur-nasional-dan-cuti-bersama-tahun-2022/,
+2022-03-03,2022-03-03,Nyepi,libur_nasional,nasional,https://setkab.go.id/inilah-skb-3-menteri-perubahan-hari-libur-nasional-dan-cuti-bersama-tahun-2022/,
+2022-03-08,2022-03-21,PPKM Level 4 DIY,ppkm,DIY,https://www.detik.com/jateng/jogja/d-5980523/seluruh-diy-di-puncak-ppkm,"Inmendagri 15 dan 16 Tahun 2022; Ingub DIY 9/2022. Pertama kali seluruh DIY di level 4. Satu sumber (Katadata) mencantumkan level 2 untuk 15-21 Mar."
+2022-03-22,2022-04-04,PPKM Level 2 DIY,ppkm,DIY,https://setkab.go.id/tidak-ada-level-4-inilah-wilayah-penerapan-ppkm-jawa-bali-periode-22-maret-hingga-4-april-2022/,Inmendagri 18/2022. Ada pemberitaan yang menyebut DIY level 3 di periode ini; belum dicek ke teks Inmendagri.
+2022-04-03,2022-05-01,Ramadan 1443 H,ramadan,nasional,https://setkab.go.id/?p=243422,"Penetapan sidang isbat Kemenag (KMA 324/2022). Muhammadiyah mulai 2 Apr. Dataset berakhir 30 Apr, Idul Fitri 2 Mei."
+2022-04-05,2022-04-18,PPKM Level 3 DIY,ppkm,DIY,https://news.republika.co.id/berita/r9v77i380/ppkm-masih-level-3-pemda-diy-tracing-dan-testing-masih-lemah,Inmendagri 20/2022; Ingub DIY 12/INSTR/2022.
+2022-04-15,2022-04-15,Wafat Isa Almasih,libur_nasional,nasional,https://setkab.go.id/inilah-skb-3-menteri-perubahan-hari-libur-nasional-dan-cuti-bersama-tahun-2022/,
+2022-04-19,2022-05-09,PPKM Level 2 DIY,ppkm,DIY,https://news.republika.co.id/berita/ralfej380/diy-mulai-berlakukan-ppkm-level-2,Inmendagri 22/2022; Ingub DIY 13/INSTR/2022.
+2022-04-29,2022-04-29,Cuti bersama Idul Fitri,cuti_bersama,nasional,https://kabar24.bisnis.com/read/20220407/15/1520368/sah-skb-3-menteri-cuti-bersama-lebaran-2022-terbit-ini-isinya,Ditetapkan lewat perubahan SKB 3 Menteri 7 Apr 2022 (juga 4-6 Mei di luar periode data).
+2022-01-01,2022-01-01,Anomali data: lompatan turun jumlah perangkat,anomali_data,dataset,https://doi.org/10.5281/zenodo.23157460,README dataset JogjaPulse bagian 6.
+2022-02-16,2022-02-16,Anomali data: lompatan turun jumlah perangkat,anomali_data,dataset,https://doi.org/10.5281/zenodo.23157460,README dataset JogjaPulse bagian 6.
+2022-03-08,2022-03-08,Anomali data: satu hari,anomali_data,dataset,https://doi.org/10.5281/zenodo.23157460,README dataset JogjaPulse bagian 6.

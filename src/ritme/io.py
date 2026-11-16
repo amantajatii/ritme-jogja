@@ -115,6 +115,13 @@ def load_od_summary() -> pd.DataFrame:
     return _read("od_summary.csv")
 
 
+def load_event_calendar() -> pd.DataFrame:
+    """Kalender kejadian dari data/external/kalender_kejadian.csv, siap dipakai style.mark_events."""
+    return pd.read_csv(
+        EXTERNAL_DIR / "kalender_kejadian.csv", parse_dates=["tanggal_mulai", "tanggal_selesai"]
+    ).sort_values("tanggal_mulai", ignore_index=True)
+
+
 def kapanewon_lookup() -> pd.DataFrame:
     """Tabel referensi 78 kapanewon: kab_code, kab_kota, kapanewon_code, kapanewon."""
     cols = ["kab_code", "kab_kota", "kapanewon_code", "kapanewon"]

@@ -106,6 +106,20 @@ batas = load_kapanewon_boundaries()
 peta_tujuan = join_kapanewon_boundaries(ringkasan_tujuan, code_col="dest_code", boundaries=batas)
 ```
 
+### Kalender kejadian
+
+`data/external/kalender_kejadian.csv` berisi kejadian yang terjadi selama periode data: periode Nataru, libur nasional dan cuti bersama, level PPKM DIY, tonggak Omicron di DIY, Ramadan 1443 H, dan tanggal anomali data. Kolomnya `tanggal_mulai`, `tanggal_selesai`, `nama`, `kategori`, `cakupan`, `sumber`, dan `catatan`. Setiap baris punya URL sumber. Kalau sumber-sumber tidak sepakat, perbedaannya ditulis di kolom `catatan`.
+
+```python
+from ritme import io, style
+
+kalender = io.load_event_calendar()
+libur = kalender[kalender["kategori"] == "libur_nasional"]
+style.mark_events(ax, libur)
+```
+
+Nilai `kategori`: `nataru`, `libur_nasional`, `cuti_bersama`, `ppkm`, `omicron`, `ramadan`, `anomali_data`. Libur semester sekolah belum dimasukkan karena kalender pendidikan resmi DIY 2021/2022 belum ditemukan.
+
 ## Struktur repo
 
 ```
@@ -118,7 +132,7 @@ ritme-jogja/
 │   ├── A_ritme_harian.ipynb
 │   └── B_klaster_kapanewon.ipynb
 ├── src/ritme/
-│   ├── io.py                   # fungsi load tiap file dan path proyek
+│   ├── io.py                   # fungsi load tiap file, kalender kejadian, dan path proyek
 │   ├── prep.py                 # normalisasi pangsa dan kolom kalender
 │   ├── style.py                # gaya grafik seragam, simpan ke figures/
 │   └── maps.py                 # batas DIY dan penggabungan peta berdasarkan kode BPS
