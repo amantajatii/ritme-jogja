@@ -1,0 +1,6 @@
+# Versi numerik yang dipakai untuk notebook E (Python 3.13).
+# Instal dengan: python -m pip install -r requirements.txt -c notebooks/E_constraints.txt
+numpy==2.2.6
+pandas==2.3.3
+scipy==1.16.3
+matplotlib==3.10.7
