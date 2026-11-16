@@ -106,6 +106,14 @@ batas = load_kapanewon_boundaries()
 peta_tujuan = join_kapanewon_boundaries(ringkasan_tujuan, code_col="dest_code", boundaries=batas)
 ```
 
+### Jalankan bagian C: dampak kejadian pada titik ramai
+
+1. Pastikan `data/raw/presence_cell500m_daily.csv` dan `data/external/kalender_kejadian.csv` sudah ada.
+2. Jalankan [notebook C](notebooks/C_dampak_kejadian.ipynb) dari awal. Notebook ini menandai sel artefak lokasi, menyusun panel sel tetap, mencari titik ramai 1–19 Des 2021, lalu mengukur perubahan pangsanya saat Nataru, Omicron, dan Ramadan. Hasilnya disimpan ke `data/processed/C_dampak_kawasan.csv` dan `data/processed/C_titik_ramai.csv`.
+3. Grafik untuk slide: [artefak lokasi](figures/C1_artefak_lokasi.png), [perjalanan waktu](figures/C2_timeseries_kawasan.png), [perubahan per kawasan](figures/C3_dotplot_kawasan.png), [peta perubahan](figures/C4_peta_perubahan.png), dan [titik ramai baru](figures/C5_titik_ramai_baru.png).
+
+Catatan untuk semua anggota: banyak sel teratas di `presence_cell500m_daily` adalah artefak lokasi (titik koordinat bulat dan pola kisi berjarak ±2,5 km), dan sel-sel ini memegang sekitar dua pertiga pangsa harian. Penjelasannya ada di bagian 1 notebook C.
+
 ### Kalender kejadian
 
 `data/external/kalender_kejadian.csv` berisi kejadian yang terjadi selama periode data: periode Nataru, libur nasional dan cuti bersama, level PPKM DIY, tonggak Omicron di DIY, Ramadan 1443 H, dan tanggal anomali data. Kolomnya `tanggal_mulai`, `tanggal_selesai`, `nama`, `kategori`, `cakupan`, `sumber`, dan `catatan`. Setiap baris punya URL sumber. Kalau sumber-sumber tidak sepakat, perbedaannya ditulis di kolom `catatan`.
@@ -130,7 +138,8 @@ ritme-jogja/
 │   └── processed/              # hasil olahan antara (tidak di-commit)
 ├── notebooks/
 │   ├── A_ritme_harian.ipynb
-│   └── B_klaster_kapanewon.ipynb
+│   ├── B_klaster_kapanewon.ipynb
+│   └── C_dampak_kejadian.ipynb
 ├── src/ritme/
 │   ├── io.py                   # fungsi load tiap file, kalender kejadian, dan path proyek
 │   ├── prep.py                 # normalisasi pangsa dan kolom kalender
