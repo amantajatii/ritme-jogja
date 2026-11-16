@@ -114,6 +114,14 @@ peta_tujuan = join_kapanewon_boundaries(ringkasan_tujuan, code_col="dest_code", 
 
 Catatan untuk semua anggota: banyak sel teratas di `presence_cell500m_daily` adalah artefak lokasi (titik koordinat bulat dan pola kisi berjarak ±2,5 km), dan sel-sel ini memegang sekitar dua pertiga pangsa harian. Penjelasannya ada di bagian 1 notebook C.
 
+### Jalankan bagian D: arus asal-tujuan dan daya tarik
+
+1. Pastikan `data/raw/od_home_visits_kapanewon_monthly.csv`, `data/raw/od_origin_homes_monthly.csv`, dan `data/processed/B_klaster_kapanewon.csv` sudah ada. File B dibuat dengan menjalankan notebook A lalu notebook B.
+2. Jalankan [notebook D](notebooks/D_asal_tujuan.ipynb) dari awal. Notebook ini memakai Desember 2021–Februari 2022, menghitung persentase perangkat dari tiap kabupaten asal yang teramati di kapanewon tujuan, menghitung daya tarik tiap kapanewon, lalu membandingkannya dengan klaster B di dalam kabupaten yang sama. Hasilnya disimpan ke `data/processed/D_daya_tarik_kapanewon.csv` dan `data/processed/D_matriks_kabupaten_ke_kapanewon.csv`.
+3. Grafik untuk slide: [matriks asal-tujuan](figures/D1_matriks_asal_tujuan.png), [peta daya tarik](figures/D2_peta_daya_tarik.png), dan [daya tarik per klaster](figures/D3_daya_tarik_per_klaster.png).
+
+Catatan: `n_maids` di OD boleh dijumlahkan antar kapanewon asal untuk satu tujuan (tiap perangkat punya satu rumah per bulan), tapi tidak boleh dijumlahkan antar tujuan. Karena itu matriks D memakai kapanewon tujuan, bukan kabupaten tujuan.
+
 ### Kalender kejadian
 
 `data/external/kalender_kejadian.csv` berisi kejadian yang terjadi selama periode data: periode Nataru, libur nasional dan cuti bersama, level PPKM DIY, tonggak Omicron di DIY, Ramadan 1443 H, dan tanggal anomali data. Kolomnya `tanggal_mulai`, `tanggal_selesai`, `nama`, `kategori`, `cakupan`, `sumber`, dan `catatan`. Setiap baris punya URL sumber. Kalau sumber-sumber tidak sepakat, perbedaannya ditulis di kolom `catatan`.
@@ -139,7 +147,8 @@ ritme-jogja/
 ├── notebooks/
 │   ├── A_ritme_harian.ipynb
 │   ├── B_klaster_kapanewon.ipynb
-│   └── C_dampak_kejadian.ipynb
+│   ├── C_dampak_kejadian.ipynb
+│   └── D_asal_tujuan.ipynb
 ├── src/ritme/
 │   ├── io.py                   # fungsi load tiap file, kalender kejadian, dan path proyek
 │   ├── prep.py                 # normalisasi pangsa dan kolom kalender
