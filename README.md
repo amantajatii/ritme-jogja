@@ -88,6 +88,24 @@ Skrip ini mengunduh semua file dari Zenodo ke `data/raw/` dan mengecek checksum 
 jupyter lab notebooks/
 ```
 
+### Jalankan bagian B: klaster ritme harian
+
+1. Letakkan CSV hasil notebook A di `data/processed/A_ritme_kapanewon.csv`. Jika belum ada, unduh data JogjaPulse lalu jalankan `notebooks/A_ritme_harian.ipynb` dari JupyterLab. Bagian B memakai 24 indeks dari 61 hari kerja biasa pada Desember 2021–Februari 2022.
+2. Jalankan [notebook B](notebooks/B_klaster_kapanewon.ipynb) dari awal. Notebook membandingkan k = 2–6, mengecek sensitivitas terhadap slot yang tersupresi, lalu menyimpan hasil ke `data/processed/B_klaster_kapanewon.csv`.
+3. Gunakan [grafik profil](figures/B1_profil_klaster.png), [peta klaster](figures/B2_peta_klaster.png), dan [narasi B](docs/B_narasi_video.md) untuk segmen video 01.45–02.25.
+
+#### Batas wilayah untuk B dan D
+
+`data/external/batas_kapanewon.geojson` berisi 78 poligon atau multipoligon dalam WGS84 (EPSG:4326), dari [layer batas kecamatan Geoportal DIY](https://geoportal.jogjaprov.go.id/server/rest/services/ADMIN_BATASWILAYAH/DIY_34_ADMINISTRASIKEC_AR/FeatureServer/0). File diambil pada 16 November 2026 lewat [kueri GeoJSON ini](https://geoportal.jogjaprov.go.id/server/rest/services/ADMIN_BATASWILAYAH/DIY_34_ADMINISTRASIKEC_AR/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=geojson). Tahun geometri belum terkonfirmasi. Atribut `kdcbps` cocok dengan 78 kode `kapanewon_code` di JogjaPulse.
+
+```python
+from ritme.maps import join_kapanewon_boundaries, load_kapanewon_boundaries
+
+batas = load_kapanewon_boundaries()
+# Ringkas OD ke satu baris per kode tujuan sebelum menggabungkan.
+peta_tujuan = join_kapanewon_boundaries(ringkasan_tujuan, code_col="dest_code", boundaries=batas)
+```
+
 ## Struktur repo
 
 ```
@@ -97,12 +115,15 @@ ritme-jogja/
 │   ├── external/               # batas wilayah, kalender kejadian
 │   └── processed/              # hasil olahan antara (tidak di-commit)
 ├── notebooks/
-│   └── A_ritme_harian.ipynb    # notebook B-E menyusul dari tiap anggota
+│   ├── A_ritme_harian.ipynb
+│   └── B_klaster_kapanewon.ipynb
 ├── src/ritme/
 │   ├── io.py                   # fungsi load tiap file dan path proyek
 │   ├── prep.py                 # normalisasi pangsa dan kolom kalender
-│   └── style.py                # gaya grafik seragam, simpan ke figures/
+│   ├── style.py                # gaya grafik seragam, simpan ke figures/
+│   └── maps.py                 # batas DIY dan penggabungan peta berdasarkan kode BPS
 ├── figures/                    # gambar hasil (PNG) untuk slide
+├── docs/B_narasi_video.md
 ├── scripts/download_data.py
 ├── requirements.txt
 └── pyproject.toml
