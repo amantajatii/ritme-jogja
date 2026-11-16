@@ -92,7 +92,7 @@ jupyter lab notebooks/
 
 1. Letakkan CSV hasil notebook A di `data/processed/A_ritme_kapanewon.csv`. Jika belum ada, unduh data JogjaPulse lalu jalankan `notebooks/A_ritme_harian.ipynb` dari JupyterLab. Bagian B memakai 24 indeks dari 61 hari kerja biasa pada Desember 2021–Februari 2022.
 2. Jalankan [notebook B](notebooks/B_klaster_kapanewon.ipynb) dari awal. Notebook membandingkan k = 2–6, mengecek sensitivitas terhadap slot yang tersupresi, lalu menyimpan hasil ke `data/processed/B_klaster_kapanewon.csv`.
-3. Gunakan [grafik profil](figures/B1_profil_klaster.png), [peta klaster](figures/B2_peta_klaster.png), dan [narasi B](docs/B_narasi_video.md) untuk segmen video 01.45–02.25.
+3. Gunakan [grafik profil](figures/B1_profil_klaster.png) dan [peta klaster](figures/B2_peta_klaster.png) untuk segmen video 01.45–02.25.
 
 #### Batas wilayah untuk B dan D
 
@@ -123,7 +123,6 @@ ritme-jogja/
 │   ├── style.py                # gaya grafik seragam, simpan ke figures/
 │   └── maps.py                 # batas DIY dan penggabungan peta berdasarkan kode BPS
 ├── figures/                    # gambar hasil (PNG) untuk slide
-├── docs/B_narasi_video.md
 ├── scripts/download_data.py
 ├── requirements.txt
 └── pyproject.toml
