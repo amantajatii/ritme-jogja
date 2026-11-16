@@ -124,11 +124,11 @@ style.save(fig, "A_profil_harian")   # tersimpan di figures/A_profil_harian.png
 
 | Anggota | Nama | Analisis | Data | Tugas bersama |
 |---|---|---|---|---|
-| A | | Ritme harian: jam sibuk tiap kapanewon, perbandingan hari kerja, akhir pekan, dan hari libur | `presence_kapanewon_hourly` | Setup repo dan README |
-| B | | Klasterisasi kapanewon (k-means) dari profil per jam: pusat kegiatan, perumahan, wisata | `presence_kapanewon_hourly` | Peta dasar batas kapanewon (`data/external/batas_kapanewon.geojson`, `src/ritme/maps.py`) |
-| C | | Dampak kejadian (Nataru, Omicron, Ramadan 2022) pada titik ramai grid 500 m | `presence_cell500m_daily` | Kalender kejadian (`data/external/kalender_kejadian.csv`) |
-| D | | Arus asal-tujuan dan daya tarik kapanewon | `od_home_visits_...`, `od_origin_homes_...` | Template gaya grafik (`src/ritme/style.py`) dan slide |
-| E | | Validasi terhadap jumlah penduduk, bias, dan keterbatasan | `home_maids_...`, `validation_night_...` | Editing video |
+| A | Diaz Amantajati Susilo | Ritme harian: jam sibuk tiap kapanewon, perbandingan hari kerja, akhir pekan, dan hari libur | `presence_kapanewon_hourly` | Setup repo dan README |
+| B | Galang Swastika Ramadhan | Klasterisasi kapanewon (k-means) dari profil per jam: pusat kegiatan, perumahan, wisata | `presence_kapanewon_hourly` | Peta dasar batas kapanewon (`data/external/batas_kapanewon.geojson`, `src/ritme/maps.py`) |
+| C | Raditya Azhar Ananta | Dampak kejadian (Nataru, Omicron, Ramadan 2022) pada titik ramai grid 500 m | `presence_cell500m_daily` | Kalender kejadian (`data/external/kalender_kejadian.csv`) |
+| D | Dien Muhammad Scientivan K.| Arus asal-tujuan dan daya tarik kapanewon | `od_home_visits_...`, `od_origin_homes_...` | Template gaya grafik (`src/ritme/style.py`) dan slide |
+| E | Faaid Sakhaa | Validasi terhadap jumlah penduduk, bias, dan keterbatasan | `home_maids_...`, `validation_night_...` | Editing video |
 
 ## Aturan kolaborasi
 
